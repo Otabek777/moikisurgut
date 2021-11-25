@@ -12,6 +12,37 @@ if(document.querySelector('.catalog__filter')) {
     };
 };
 
+if(document.querySelector('.catalog_open')) {
+    const catalogOpen = document.querySelectorAll('.catalog_open');
+    for(let i = 0; i < catalogOpen.length; i++) {
+        catalogOpen[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            const catalogOpenp = this.querySelector('p');
+            if(this.classList.contains('active')) {
+                catalogOpenp.textContent = "Cкрыть";
+            } else {
+                catalogOpenp.textContent = "Показать все";
+            };
+        });
+    };
+};
+
+document.querySelector('.btn_open_menu').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.header_min_menu').classList.toggle('active');
+});
+
+if(document.querySelector('.catalog_menu_open')) {
+    document.querySelector('.catalog_menu_open').addEventListener('click', function() {
+        document.querySelector('.catalog__filter').classList.add('active');
+        document.querySelector('body').classList.add('hidden');
+    });
+    document.querySelector('.fliter_close').addEventListener('click', function() {
+        document.querySelector('.catalog__filter').classList.remove('active');
+        document.querySelector('body').classList.remove('hidden');
+    });
+};
+
 
 if(document.querySelector('.product__description')) {
     const desBtn1 = document.querySelector('#description_btn1');

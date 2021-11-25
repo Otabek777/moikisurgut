@@ -15,6 +15,14 @@
 <body>
     <header class="header">
         <div class="header__top">
+            <div class="header_min_menu">
+                <a href="#">Главная</a>
+                <a href="">О компании</a>
+                <a href="#">Акции</a>
+                <a href="#">Оплата</a>
+                <a href="#">Доставка</a>
+                <a href="#">Контакты</a>
+            </div>
             <div class="container">
                 <div class="box">
                     <div class="header__map">
@@ -40,6 +48,11 @@
                         <li>
                             <a href="#">Контакты</a>
                         </li>
+                        <button class="btn_open_menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </ul>
                     <div class="header__right">
                         <a href="tomail:moikisurgut@mail.ru" class="email">
@@ -83,6 +96,72 @@
                                 <span>5</span>
                             </div>
                         </button>
+                    </div>
+                </div>
+                <div class="catalog_menu">
+                    <div class="catalog_menu_block">
+                        <div class="catalog_menu_box">
+                            <div class="block_item">
+                                <h5><a href="#">Кухонные мойки</a></h5>
+                                <div class="items">
+                                    <a href="#">Искусственный камень</a>
+                                    <a href="#">Нержавеющая сталь</a>
+                                    <a href="#">Глянцевые</a>
+                                    <a href="#">Матовые</a>
+                                </div>
+                            </div>
+                            <div class="block_item">
+                                <h5><a href="#">Смесители</a></h5>
+                                <div class="catalog_open">
+                                    <p>Показать все</p>
+                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.60996 0.399037L5.72996 4.27903L1.84996 0.399037C1.45996 0.00903697 0.829961 0.00903697 0.439961 0.399037C0.049961 0.789036 0.049961 1.41904 0.439961 1.80904L5.02996 6.39903C5.41996 6.78903 6.04996 6.78903 6.43996 6.39903L11.03 1.80904C11.42 1.41904 11.42 0.789036 11.03 0.399037C10.64 0.0190369 9.99996 0.00903697 9.60996 0.399037Z" fill="#9195A7"/>
+                                    </svg>
+                                </div>
+                                <div class="items">
+                                    <a href="#">Для раковин</a>
+                                    <a href="#">Для кухни</a>
+                                    <a href="#">Для душа</a>
+                                    <a href="#">Для биде</a>
+                                    <a href="#">Для биде</a>
+                                    <a href="#">Для биде</a>
+                                    <a href="#">Для биде</a>
+                                </div>
+                            </div>
+                            <div class="block_item">
+                                <h5><a href="#">Раковины</a></h5>
+                                <div class="items">
+                                    <a href="#">На тумбу</a>
+                                    <a href="#">Над стиральной машиной</a>
+                                </div>
+                            </div>
+                            <div class="block_item">
+                                <h5><a href="#">Полотенцесушители</a></h5>
+                                <div class="items">
+                                    <a href="#">На тумбу</a>
+                                    <a href="#">Над стиральной машиной</a>
+                                </div>
+                            </div>
+                            <div class="block_item">
+                                <h5><a href="#">Аксессуары</a></h5>
+                                <div class="catalog_open">
+                                    <p>Показать все</p>
+                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.60996 0.399037L5.72996 4.27903L1.84996 0.399037C1.45996 0.00903697 0.829961 0.00903697 0.439961 0.399037C0.049961 0.789036 0.049961 1.41904 0.439961 1.80904L5.02996 6.39903C5.41996 6.78903 6.04996 6.78903 6.43996 6.39903L11.03 1.80904C11.42 1.41904 11.42 0.789036 11.03 0.399037C10.64 0.0190369 9.99996 0.00903697 9.60996 0.399037Z" fill="#9195A7"/>
+                                    </svg>
+                                </div>
+                                <div class="items">
+                                    <a href="#">Сиденья для ванн</a>
+                                    <a href="#">Светильники для ванной комнаты</a>
+                                    <a href="#">Держатели для зубных щеток</a>
+                                    <a href="#">Держатели для фена</a>
+                                    <a href="#">Дозаторы</a>
+                                    <a href="#">Сиденья для ванн</a>
+                                    <a href="#">Держатели для фена</a>
+                                    <a href="#">Дозаторы</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,6 +247,7 @@
                     </div>
                     <div class="product__content">
                         <h3 class="price">4 200 ₽</h3>
+                        <h4>Цвет</h4>
                         <div class="colors">
                             <div class="radio white">
                                 <input type="radio" id="1" name="color">
@@ -288,7 +368,15 @@
             asNavFor: '.product__slick',
             dots: false,
             arrows: false,
-            focusOnSelect: true
+            focusOnSelect: true,
+            responsive: [
+                {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                }
+                },
+            ]
         });
     </script>
 </body>
