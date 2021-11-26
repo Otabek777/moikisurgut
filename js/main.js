@@ -27,6 +27,11 @@ if(document.querySelector('.catalog_open')) {
     };
 };
 
+document.querySelector('.open_search').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.header__search').classList.toggle('active');
+});
+
 document.querySelector('.btn_open_menu').addEventListener('click', function() {
     this.classList.toggle('active');
     document.querySelector('.header_min_menu').classList.toggle('active');
@@ -77,5 +82,24 @@ if(document.querySelector('.product__description')) {
         desBlock3.classList.add('show');
         desBlock1.classList.remove('show');
         desBlock2.classList.remove('show');
+    });
+};
+
+if(document.querySelector('.catalog_menu_open')) {
+    $(window).scroll(function(){
+        if ( $(this).scrollTop() > 100) {
+            $('.catalog_menu_open').addClass('fixed');
+        } else {
+            $('.catalog_menu_open').removeClass('fixed');
+        }
+    });
+};
+if(document.querySelector('.product__content .btn')) {
+    $(window).scroll(function(){
+        if ( $(this).scrollTop() > 400) {
+            $('.product__content .btn').addClass('fixed');
+        } else {
+            $('.product__content .btn').removeClass('fixed');
+        }
     });
 };
