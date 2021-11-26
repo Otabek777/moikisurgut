@@ -37,6 +37,39 @@ document.querySelector('.btn_open_menu').addEventListener('click', function() {
     document.querySelector('.header_min_menu').classList.toggle('active');
 });
 
+document.querySelector('.mobile_menu__burgir').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.header_min_menu').classList.toggle('active');
+
+    document.querySelector('.mobile_catalog').classList.remove('active');
+});
+document.querySelector('.mobile_menu__catalog').addEventListener('click', function() {
+    document.querySelector('.mobile_catalog').classList.toggle('active');
+
+    document.querySelector('.mobile_menu__burgir').classList.remove('active');
+    document.querySelector('.header_min_menu').classList.remove('active');
+});
+
+const catalogLi = document.querySelectorAll('.mobile_catalog__li');
+for(let i = 0; i < catalogLi.length; i++) {
+    catalogLi[i].addEventListener('click', function() {
+        this.classList.add('active');
+    });
+};
+
+const catalogBack = document.querySelectorAll('.mobile_catalog__back');
+for(let i = 0; i < catalogBack.length; i++) {
+    catalogBack[i].addEventListener('click', function() {
+        
+        for(let j = 0; j < catalogLi.length; j++) {
+            setTimeout(function() {
+                catalogLi[j].classList.remove('active');
+            }, 001);
+        };
+
+    });
+};
+
 if(document.querySelector('.catalog_menu_open')) {
     document.querySelector('.catalog_menu_open').addEventListener('click', function() {
         document.querySelector('.catalog__filter').classList.add('active');
