@@ -1754,12 +1754,19 @@ ul, ol {
     .footer__bottom .right img {
       margin-left: 16px; }
 
+.product_stock {
+  padding-top: 50px;
+  padding-bottom: 90px; }
+
 .btn_open_menu, .header_min_menu, .catalog__filter_top, .catalog_menu_open, .open_search {
   display: none; }
 
 @media screen and (max-width: 1025px) {
   .container {
     padding: 0 40px !important; }
+  .product_stock {
+    padding-top: 6px !important;
+    padding-bottom: 60px; }
   .filter_btn .btn {
     position: fixed;
     bottom: 0; }
